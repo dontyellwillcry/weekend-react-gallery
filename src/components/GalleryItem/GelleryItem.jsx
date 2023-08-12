@@ -1,11 +1,17 @@
-function GalleryItem() {
+function GalleryItem(item, getGallery) {
 
-    return (<>
-    
-    
-    
-    
-    </>)
+    return (
+        <>
+          
+          <img
+            src={item.path}
+            alt="Clickable Image"
+            // onClick={handleImageClick}
+            style={{ cursor: 'pointer' }} // Change cursor to indicate clickability
+          />
+        
+        </>
+      );
 
 }
 
