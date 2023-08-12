@@ -5,6 +5,9 @@ import GalleryItem from "../GalleryItem/GelleryItem";
 
 function GalleryList() {
   const [galleryItem, setGalleryItem] = useState([]);
+  useEffect(() => {
+    getGallery();
+  }, []);
 
   let getGallery = () => {
     axios
@@ -17,9 +20,9 @@ function GalleryList() {
         console.log("error in GET:", error);
       });
   };
-  useEffect(() => {
-    getGallery();
-  }, []);
+//   useEffect(() => {
+//     getGallery();
+//   }, []);
 
   return (
     <div>
