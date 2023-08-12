@@ -26,7 +26,7 @@ function GalleryItem({ item, getGallery }) {
     <div className="gallery-container">
       <div onClick={handleImageClick} style={{ cursor: "pointer" }}>
         {showImage ? (
-          <img src={item.path} alt="Clickable Image" />
+          <img src={item.path}/>
         ) : (
           <div>{item.description}</div>
         )}
