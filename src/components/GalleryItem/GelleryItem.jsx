@@ -7,7 +7,7 @@ function GalleryItem({ item, getGallery }) {
   const [showImage, setShowImage] = useState(true);
 
   function handleImageClick() {
-    setShowImage(!showImage);
+    setShowImage(!showImage); // This is the toggle. When handleImageClick is clicked, it will NOT be whatever boolean the state currently is.
 
   }
 
@@ -22,6 +22,8 @@ function GalleryItem({ item, getGallery }) {
         alert("Something went wrong!!!");
       });
   }
+
+  // Is showImage true? then show image, else: show item.description
   return (
     <div className="gallery-container">
       <div onClick={handleImageClick} style={{ cursor: "pointer" }}>
