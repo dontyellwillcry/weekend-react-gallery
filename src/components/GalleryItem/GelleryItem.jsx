@@ -1,6 +1,9 @@
 import axios from "axios";
 import "./GalleryItem.css";
 import { useState, useEffect } from "react";
+import React from 'react';
+import Button from 'react-bootstrap/Button';
+
 
 
 function GalleryItem({ item, getGallery }) {
@@ -26,17 +29,16 @@ function GalleryItem({ item, getGallery }) {
   // Is showImage true? then show image, else: show item.description
   return (
     <div className="gallery-container">
-      <div onClick={handleImageClick} style={{ cursor: "pointer" }}>
         {showImage ? (
-          <img src={item.path}/>
+          <img src={item.path} style={{ cursor: "pointer" }} onClick={handleImageClick}/>
         ) : (
-          <div>{item.description}</div>
+          <div onClick={handleImageClick} style={{ cursor: "pointer" }}>{item.description}</div>
         )}
-      </div>
+      
       <div className="button-container">
-        <button onClick={() => handleLoveClick(item.id)}>
+        <Button onClick={() => handleLoveClick(item.id)}>
           Click to Love!!!
-        </button>
+        </Button>
         <p>{item.likes} People love this!!!</p>
       </div>
     </div>
