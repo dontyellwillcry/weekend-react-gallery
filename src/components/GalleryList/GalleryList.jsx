@@ -32,7 +32,10 @@ function GalleryList() {
       <p>Gallery goes here</p>
 
       {galleryItem.map((item) => (
-        <GalleryItem key={item.id} item={item} getGallery={getGallery} />
+        <GalleryItem 
+        key={item.id} 
+        item={item} 
+        getGallery={getGallery} />
       ))}
     </div>
   );
