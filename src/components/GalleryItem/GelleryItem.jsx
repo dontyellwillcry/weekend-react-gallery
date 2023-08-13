@@ -3,6 +3,8 @@ import "./GalleryItem.css";
 import { useState, useEffect } from "react";
 import React from 'react';
 import Button from 'react-bootstrap/Button';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 
 
@@ -28,21 +30,28 @@ function GalleryItem({ item, getGallery }) {
 
   // Is showImage true? then show image, else: show item.description
   return (
-    <div className="gallery-container">
-        {showImage ? (
-          <img src={item.path} style={{ cursor: "pointer" }} onClick={handleImageClick}/>
-        ) : (
-          <div onClick={handleImageClick} style={{ cursor: "pointer" }}>{item.description}</div>
-        )}
-      
-      <div className="button-container">
-        <Button onClick={() => handleLoveClick(item.id)}>
-          Click to Love!!!
-        </Button>
-        <p>{item.likes} People love this!!!</p>
-      </div>
+    
+    <div className="inline-container">
+    <div className="image-container" onClick={handleImageClick} style={{ cursor: "pointer" }}>
+      {showImage ? (
+        <img src={item.path} alt="Item" />
+      ) : (
+        <div className="description">{item.description}</div>
+      )}
     </div>
+  
+    <div className="button-container">
+      <Button variant="dark" onClick={() => handleLoveClick(item.id)}>
+        Click to Love!!!
+      </Button>
+      <p>{item.likes} People love this!!!</p>
+    </div>
+  </div>
+    
+    
+    
   );
+  
 }
 
 export default GalleryItem;

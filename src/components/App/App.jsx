@@ -14,6 +14,7 @@ function App() {
       <GalleryList />
     </div>
   );
+  
  
 }
 
