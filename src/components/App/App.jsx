@@ -1,12 +1,9 @@
-import React from 'react';
+import React from "react";
 import axios from "axios";
 import { useState, useEffect } from "react";
-import './App.css';
-import GalleryList from '../GalleryList/GalleryList';
+import "./App.css";
+import GalleryList from "../GalleryList/GalleryList";
 // import GalleryItem from '../GalleryItem/GelleryItem';
-
-
-
 
 function App() {
   return (
@@ -14,8 +11,6 @@ function App() {
       <GalleryList />
     </div>
   );
-  
- 
 }
 
 export default App;

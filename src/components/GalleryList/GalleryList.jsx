@@ -20,9 +20,9 @@ function GalleryList() {
         console.log("error in GET:", error);
       });
   };
-//   useEffect(() => {
-//     getGallery();
-//   }, []);
+  //   useEffect(() => {
+  //     getGallery();
+  //   }, []);
 
   return (
     <div>
@@ -30,17 +30,11 @@ function GalleryList() {
         <h1 className="App-title">Gallery of My Life</h1>
       </header>
       <p>Gallery goes here</p>
-      
-     
+
       {galleryItem.map((item) => (
-        <GalleryItem 
-        key={item.id} 
-        item={item} 
-        getGallery={getGallery} />
+        <GalleryItem key={item.id} item={item} getGallery={getGallery} />
       ))}
-      
     </div>
-    
   );
 }
 
